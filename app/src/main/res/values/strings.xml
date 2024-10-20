@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">jonsBarb</string>
+
+    <string name="btnControl">Control de barberos</string>
+    <string name="btnlistCitas">Ver citas</string>
+    <string name="Welc">Welcome</string>
+    <string name="Succes">Successful</string>
+    <string name="Send">Regis</string>
+    <string name="DelBarb">Delete</string>
+    <string name="updBarb">Update</string>
+</resources>
