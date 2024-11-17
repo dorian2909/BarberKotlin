@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="DelBarb">Delete</string>
+    <string name="Send">Regis</string>
+    <string name="Succes">Successful</string>
+    <string name="Welc">Welcome</string>
+    <string name="app_name">jonsBarb</string>
+    <string name="btnControl">Control de barberos</string>
+    <string name="btnListbarb">Barbers List</string>
+    <string name="btnlistCitas">Ver citas</string>
+    <string name="image">Load image</string>
+    <string name="imageNotfo">Image don found</string>
+    <string name="msgBarbernotFound">Barber not found</string>
+    <string name="msgIsduplicate">Barber duplicated</string>
+    <string name="updBarb">Update</string>
+    <style name="Base.Theme.JonsBarb." parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        
+        
+    </style>
+    <style name="Theme.JonsBarb" parent="Base.Theme.JonsBarb"/>
+</resources>
