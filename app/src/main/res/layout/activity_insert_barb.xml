@@ -8,13 +8,14 @@
     tools:context=".insertBarb">
 
     <TableLayout
-        android:id="@+id/txt_cedula"
+        android:id="@+id/table"
         android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TableRow
             android:layout_width="match_parent"
@@ -27,7 +28,7 @@
                 android:text="Cedula" />
 
             <EditText
-                android:id="@+id/txtcedUpd"
+                android:id="@+id/txtced"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -45,7 +46,7 @@
                 android:text="Nombre" />
 
             <EditText
-                android:id="@+id/txtNombreupd"
+                android:id="@+id/txtNombre"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -64,7 +65,7 @@
                 android:text="Telefono" />
 
             <EditText
-                android:id="@+id/txtPhoneupd"
+                android:id="@+id/txtPhone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -83,8 +84,8 @@
                 android:text="Email" />
 
             <EditText
-                android:id="@+id/txtEmailupd"
-                android:layout_width="match_parent"
+                android:id="@+id/txtEmail"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textEmailAddress" />
@@ -95,10 +96,23 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/btn_Update"
+                android:id="@+id/btn_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Send" />
+                android:text="@string/image" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="78dp"
+                android:layout_height="match_parent"
+                tools:srcCompat="@tools:sample/avatars" />
         </TableRow>
     </TableLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

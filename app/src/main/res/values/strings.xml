@@ -8,4 +8,9 @@
     <string name="Send">Regis</string>
     <string name="DelBarb">Delete</string>
     <string name="updBarb">Update</string>
+    <string name="msgBarbernotFound">Barber not found</string>
+    <string name="btnListbarb">Barbers List</string>
+    <string name="msgIsduplicate">Barber duplicated</string>
+    <string name="image">Load image</string>
+    <string name="imageNotfo">Image don found</string>
 </resources>
