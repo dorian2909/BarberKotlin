@@ -34,6 +34,8 @@ class insertBarb : AppCompatActivity() {
 
     private lateinit var modelB: BarberModel
     private val IMAGE_REQUEST_CODE = 1001
+    private val CAMERA_REQUEST_CODE = 1002 // Código para capturar fotos
+
 
     private lateinit var imageB: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -84,13 +86,13 @@ class insertBarb : AppCompatActivity() {
             }
 
             R.id.btn_delete -> {
-              //  util.openActivity(this, deleteBa::class.java)
+                showConfirmationDialog("delete")
 
                 return true
             }
 
             R.id.btn_update -> {
-               // util.openActivity(this, updateBarb::class.java)
+                showConfirmationDialog("update")
                 return true
             }
 
@@ -111,7 +113,7 @@ class insertBarb : AppCompatActivity() {
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == 1 && resultCode == RESULT_OK) {
+        if (requestCode == CAMERA_REQUEST_CODE && resultCode == RESULT_OK) {
             // Extraer el bitmap desde el intent
             val imgBitmap = data?.extras?.get("data") as? Bitmap
             if (imgBitmap != null) {
@@ -129,7 +131,7 @@ class insertBarb : AppCompatActivity() {
     // Abre la cámara
     private fun openCam() {
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        startActivityForResult(intent, 1)
+        startActivityForResult(intent, CAMERA_REQUEST_CODE)
     }
 
 
@@ -204,4 +206,52 @@ class insertBarb : AppCompatActivity() {
             }
             .show()
     }
+     private fun showConfirmationDialog(action: String) {
+        val message =
+            if (action == "delete") "¿Seguro que deseas eliminar el contenedor?" else "¿Seguro que deseas actualizar el contenedor?"
+
+        AlertDialog.Builder(this).apply {
+            setTitle("Confirmación")
+            setMessage(message)
+            setPositiveButton("Sí") { _, _ ->
+                when (action) {
+                   "delete" -> performDeleteBarber()
+                    "update" -> performUpdateBarber()
+                }
+            }
+            setNegativeButton("No", null)
+        }.show()
+    }
+
+
+    private fun performUpdateBarber() {
+        try {
+            val imgUri = imageB.drawable?.let { drawable ->
+                val bitmap = (drawable as BitmapDrawable).bitmap
+                saveImageToInternalStorage(bitmap)
+            }
+            val obBarb = Barber(
+                id = cedB.text.toString(),
+                name = nameB.text.toString(),
+                phone = telB.text.toString().toIntOrNull() ?: -1,
+                email = emailB.text.toString(),
+                img = imgUri.toString()
+            )
+            modelB.updateBarber(obBarb)
+            Toast.makeText(this, R.string.Succes, Toast.LENGTH_LONG).show()
+            util.openActivity(this, barberCustomList::class.java)
+        }catch (e: Exception) {
+            Toast.makeText(this, "Error al cargar los datos: ${e.message}", Toast.LENGTH_LONG).show()
+        }
+
+    }
+    private fun performDeleteBarber() {
+        modelB.remBarber(cedB.text.toString())
+        Toast.makeText(this, R.string.delet, Toast.LENGTH_LONG).show()
+
+
+        util.openActivity(this, barberCustomList::class.java)
+    }
+
+    /*Al insertar el clean barber me da un error a cargar la imagen y no pude resolverlo*/
 }

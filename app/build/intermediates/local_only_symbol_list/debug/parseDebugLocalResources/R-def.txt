@@ -53,6 +53,7 @@ string app_name
 string btnControl
 string btnListbarb
 string btnlistCitas
+string delet
 string image
 string imageNotfo
 string msgBarbernotFound

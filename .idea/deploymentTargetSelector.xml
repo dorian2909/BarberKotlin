@@ -4,10 +4,13 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-10-20T18:41:37.433569700Z">
+        <DropdownSelection timestamp="2024-11-18T03:40:57.683139300Z">
           <Target type="DEFAULT_BOOT">
+            <handle>
+              <DeviceId pluginId="FirebaseDirectAccess" identifier="reservation=projects/eduscope-a08f6/deviceSessions/session-2uvzdqn55k3rf" />
+            </handle>
             <template>
-              <DeviceId pluginId="FirebaseDirectAccess" type="TEMPLATE" identifier="model_id=e1q/34" />
+              <DeviceId pluginId="FirebaseDirectAccess" type="TEMPLATE" identifier="model_id=dm3q/34" />
             </template>
           </Target>
         </DropdownSelection>

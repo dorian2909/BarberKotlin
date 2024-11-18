@@ -13,4 +13,5 @@
     <string name="msgIsduplicate">Barber duplicated</string>
     <string name="image">Load image</string>
     <string name="imageNotfo">Image don found</string>
+    <string name="delet">Succes delete</string>
 </resources>

@@ -10,6 +10,7 @@
     <string name="btnControl">Control de barberos</string>
     <string name="btnListbarb">Barbers List</string>
     <string name="btnlistCitas">Ver citas</string>
+    <string name="delet">Succes delete</string>
     <string name="image">Load image</string>
     <string name="imageNotfo">Image don found</string>
     <string name="msgBarbernotFound">Barber not found</string>
