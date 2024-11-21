@@ -1,5 +1,6 @@
 package utn.cr.jonsbarb
 
+
 import Entities.Barber
 import Model.BarberModel
 import Util.util
@@ -23,6 +24,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import java.io.ByteArrayOutputStream
 
 import java.io.File
 
@@ -81,18 +83,18 @@ class insertBarb : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.btn_insert -> {
-                saveContainer()
+                saveBarber()
                 return true
             }
 
             R.id.btn_delete -> {
-                showConfirmationDialog("delete")
+              //  showConfirmationDialog("delete")
 
                 return true
             }
 
             R.id.btn_update -> {
-                showConfirmationDialog("update")
+               // showConfirmationDialog("update")
                 return true
             }
 
@@ -111,19 +113,31 @@ class insertBarb : AppCompatActivity() {
         intent.type = "image/*"
         startActivityForResult(intent, IMAGE_REQUEST_CODE)
     }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == CAMERA_REQUEST_CODE && resultCode == RESULT_OK) {
-            // Extraer el bitmap desde el intent
+            // Obtener el Bitmap desde el Intent
             val imgBitmap = data?.extras?.get("data") as? Bitmap
+
             if (imgBitmap != null) {
-                imageB.setImageBitmap(imgBitmap) // Asignar el bitmap al ImageView
-                Toast.makeText(this, "Se obtuvo la imagen", Toast.LENGTH_LONG).show()
+                // Establecer el Bitmap en el ImageView
+                imageB.setImageBitmap(imgBitmap)
+
+                // Convertir la imagen a ByteArray
+                val stream = ByteArrayOutputStream()
+                imgBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
+                val imgByteArray = stream.toByteArray()
+
+                // Ahora puedes guardar el imgByteArray en la base de datos si es necesario
             } else {
                 Toast.makeText(this, "No se pudo obtener la imagen", Toast.LENGTH_LONG).show()
             }
         }
     }
+
+
+
 
 
 
@@ -136,34 +150,52 @@ class insertBarb : AppCompatActivity() {
 
 
     // Método insert
-    private fun saveContainer() {
+    private fun saveBarber() {
+        val db = DBBarbers(this)
+        val resultId = db.insertarBarber("1", "Dado", 123, "dado@gmail.com", ByteArray(0)) // Usando una imagen vacía
+
         try {
-            // Guardar imagen en almacenamiento interno y obtener la URI
-            val imgUri = imageB.drawable?.let { drawable ->
-                val bitmap = (drawable as BitmapDrawable).bitmap
-                saveImageToInternalStorage(bitmap)
+
+            // Validar campos requeridos
+            val name = nameB.text.toString()
+            val phone = telB.text.toString().toIntOrNull() ?: -1
+            val email = emailB.text.toString()
+            val id = cedB.text.toString()
+
+            // Obtener la imagen desde el ImageView
+            val drawable = imageB.drawable as? BitmapDrawable
+            val imgBitmap = drawable?.bitmap
+
+            if (imgBitmap == null) {
+                Toast.makeText(this, "Por favor capture una imagen", Toast.LENGTH_SHORT).show()
+                return
             }
 
-            // Crear el objeto Barber
-            val obBarb = Barber(
-                id = cedB.text.toString(),
-                name = nameB.text.toString(),
-                phone = telB.text.toString().toIntOrNull() ?: -1,
-                email = emailB.text.toString(),
-                img = imgUri.toString()
-            )
+            // Convertir la imagen a ByteArray
+            val stream = ByteArrayOutputStream()
+            imgBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
+            val imgByteArray = stream.toByteArray()
 
-            if (modelB.isDuplicate(obBarb)) {
-                Toast.makeText(this, R.string.msgIsduplicate, Toast.LENGTH_LONG).show()
+            // Crear una instancia de DBBarbers y guardar los datos en la base de datos
+            val dbBarber = DBBarbers(this)
+
+            // Insertar los datos de la barbería (incluyendo la imagen en formato ByteArray)
+            val resultId = dbBarber.insertarBarber(id, name, phone, email, imgByteArray)
+
+            // Verificar el resultado
+            if (resultId > 0) {
+                Toast.makeText(this, "Barbero guardado correctamente", Toast.LENGTH_SHORT).show()
             } else {
-                modelB.addBarber(obBarb)
-                Toast.makeText(this, R.string.Succes, Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Error al guardar en la base de datos", Toast.LENGTH_SHORT).show()
             }
-
         } catch (e: Exception) {
-            Toast.makeText(this, e.message.toString(), Toast.LENGTH_LONG).show()
+            // Capturar cualquier excepción y mostrar el mensaje
+            Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
         }
     }
+
+
+
     private fun loadBarberData(BarberId: String) {
         try {
 
@@ -206,7 +238,7 @@ class insertBarb : AppCompatActivity() {
             }
             .show()
     }
-     private fun showConfirmationDialog(action: String) {
+    /* private fun showConfirmationDialog(action: String) {
         val message =
             if (action == "delete") "¿Seguro que deseas eliminar el contenedor?" else "¿Seguro que deseas actualizar el contenedor?"
 
@@ -221,10 +253,10 @@ class insertBarb : AppCompatActivity() {
             }
             setNegativeButton("No", null)
         }.show()
-    }
+    }*/
 
 
-    private fun performUpdateBarber() {
+   /* private fun performUpdateBarber() {
         try {
             val imgUri = imageB.drawable?.let { drawable ->
                 val bitmap = (drawable as BitmapDrawable).bitmap
@@ -251,7 +283,7 @@ class insertBarb : AppCompatActivity() {
 
 
         util.openActivity(this, barberCustomList::class.java)
-    }
+    }*/
 
     /*Al insertar el clean barber me da un error a cargar la imagen y no pude resolverlo*/
 }

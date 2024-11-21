@@ -6,7 +6,7 @@ class Barber {
 
     private var _phone: Int = 0
     private var _email: String = ""
-    private var imageUri: String =""
+    private var _image: ByteArray? = null
 
 
     constructor()
@@ -16,7 +16,7 @@ class Barber {
         name: String,
         phone: Int,
         email: String,
-        img:String
+        img: ByteArray?
 
     ) {
         this._id = id
@@ -24,7 +24,7 @@ class Barber {
 
         this._phone = phone
         this._email = email
-        this.imageUri= img
+        this._image= img
 
     }
 
@@ -55,9 +55,9 @@ class Barber {
         set(value) {
             this._email = value
         }
-    var image: String
-        get() = this.imageUri
+    var image: ByteArray?
+        get() = this._image
         set(value) {
-            this.imageUri = value
+            this._image = value
         }
 }

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:2:1-39:12
+ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:2:1-40:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Dorian\.gradle\caches\transforms-4\86c9a9e55dc8d45fef0ed473fafdfd97\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Dorian\.gradle\caches\transforms-4\00a9d304153cff6bf102e5d15bd65c62\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\Dorian\.gradle\caches\transforms-4\b44a70d7e195d1f7227b1c5db7398e06\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
@@ -60,8 +60,8 @@ ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main
 	android:name
 		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:4:22-78
 application
-ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:8:5-37:19
-INJECTED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:8:5-37:19
+ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:9:5-38:19
+INJECTED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:9:5-38:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Dorian\.gradle\caches\transforms-4\86c9a9e55dc8d45fef0ed473fafdfd97\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Dorian\.gradle\caches\transforms-4\86c9a9e55dc8d45fef0ed473fafdfd97\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Dorian\.gradle\caches\transforms-4\00a9d304153cff6bf102e5d15bd65c62\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -83,57 +83,57 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Do
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.1] C:\Users\Dorian\.gradle\caches\transforms-4\aad39a1c0706ab6a5a30470c2306073d\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:16:9-35
 	android:label
-		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:13:9-41
+		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:14:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:11:9-54
+		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:12:9-54
 	android:roundIcon
-		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:14:9-54
+		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:15:9-54
 	tools:targetApi
-		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:17:9-29
+		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:18:9-29
 	android:icon
-		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:9:9-35
+		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:16:9-46
+		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:17:9-46
 	android:dataExtractionRules
-		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:10:9-65
+		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:11:9-65
 activity#utn.cr.jonsbarb.barberCustomList
-ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:18:9-20:40
+ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:19:9-21:40
 	android:exported
-		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:20:13-37
+		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:21:13-37
 	android:name
-		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:19:13-45
+		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:20:13-45
 activity#utn.cr.jonsbarb.barberlist
-ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:21:9-23:40
+ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:22:9-24:40
 	android:exported
-		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:23:13-37
+		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:24:13-37
 	android:name
-		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:22:13-39
+		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:23:13-39
 activity#utn.cr.jonsbarb.insertBarb
-ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:25:9-27:40
+ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:26:9-28:40
 	android:exported
-		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:27:13-37
+		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:28:13-37
 	android:name
-		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:26:13-39
+		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:27:13-39
 activity#utn.cr.jonsbarb.MainActivity
-ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:28:9-36:20
+ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:29:9-37:20
 	android:exported
-		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:30:13-36
+		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:31:13-36
 	android:name
-		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:29:13-41
+		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:30:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:31:13-35:29
+ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:32:13-36:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:32:17-69
+ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:33:17-69
 	android:name
-		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:32:25-66
+		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:33:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:34:17-77
+ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:35:17-77
 	android:name
-		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:34:27-74
+		ADDED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml:35:27-74
 uses-sdk
 INJECTED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Dorian\Documents\AndroidStudioProjects\jonsBarb\app\src\main\AndroidManifest.xml
