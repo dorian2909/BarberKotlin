@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <!-- Imagen del barbero -->
+    <ImageView
+        android:id="@+id/item_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="centerCrop"
+
+        />
+
+    <!-- Contenedor de texto -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Nombre del barbero -->
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre del Barbero"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+
+        <!-- Cédula del barbero -->
+        <TextView
+            android:id="@+id/item_ced"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cédula:"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray" />
+
+        <!-- Teléfono del barbero -->
+        <TextView
+            android:id="@+id/item_tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Teléfono: "
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray" />
+
+        <!-- Correo del barbero -->
+        <TextView
+            android:id="@+id/item_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correo: "
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray" />
+    </LinearLayout>
+
+</LinearLayout>

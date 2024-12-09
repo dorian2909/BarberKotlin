@@ -1,4 +1,4 @@
-package utn.cr.jonsbarb
+/*package utn.cr.jonsbarb
 
 import Util.util
 import android.os.Bundle
@@ -24,7 +24,7 @@ class createDate : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.crud_menu, menu)
+        inflater.inflate(R.menu.mnu_crud, menu)
         return true
     }
 
@@ -37,13 +37,13 @@ class createDate : AppCompatActivity() {
             }
 
             R.id.mnu_delete -> {
-                util.openActivity(this, deleteBa::class.java)
+                //util.openActivity(this, deleteBa::class.java)
 
                 return true
             }
 
             R.id.mnu_upd -> {
-                util.openActivity(this, updateBarb::class.java)
+              //  util.openActivity(this, updateBarb::class.java)
                 return true
             }
 
@@ -56,4 +56,4 @@ class createDate : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
-}
+}*/
